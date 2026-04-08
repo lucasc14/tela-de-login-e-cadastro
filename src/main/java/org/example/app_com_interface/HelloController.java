@@ -9,7 +9,8 @@ import javafx.scene.control.TextField;
 public class HelloController {
     @FXML
     TextField txtUsuario ;
-    @FXML    PasswordField txtSenha;
+    @FXML
+    PasswordField txtSenha;
     @FXML
     Button btnLogin;
     @FXML
@@ -17,6 +18,18 @@ public class HelloController {
 
     @FXML
     protected void onBtnLoginClick() {
-        labelLogin.setText("Login realizado com sucesso!");
+       LoginDAO usuario = new LoginDAO();
+       String usuariDigitado = txtUsuario.getText();
+       String senhaDigitado = txtSenha.getText();
+
+       boolean autenticado = usuario.autenticar (usuariDigitado, senhaDigitado);
+
+       if (autenticado) {
+           labelLogin.setText("Usuario e senha corretos!!");
+       }
+       else {
+           labelLogin.setText("Usuario ou senha incorretos!!");
+       }
     }
+
 }
