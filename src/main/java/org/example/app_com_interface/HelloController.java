@@ -9,8 +9,7 @@ import javafx.scene.control.TextField;
 public class HelloController {
     @FXML
     TextField txtUsuario ;
-    @FXML
-    PasswordField txtSenha;
+    @FXML    PasswordField txtSenha;
     @FXML
     Button btnLogin;
     @FXML
