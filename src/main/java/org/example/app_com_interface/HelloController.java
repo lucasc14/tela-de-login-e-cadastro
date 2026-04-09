@@ -1,10 +1,7 @@
 package org.example.app_com_interface;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class HelloController {
     @FXML
@@ -15,14 +12,23 @@ public class HelloController {
     Button btnLogin;
     @FXML
     Label labelLogin;
+    @FXML
+    Hyperlink LinkCadastro;
+
+    @FXML
+    protected void irParaTelaCadastro () throws Exception {
+        // chama o metodo da Appllication para trocar a cena
+        HelloApplication.trocadorDeTelas("cadastro.fxml");
+    }
+
 
     @FXML
     protected void onBtnLoginClick() {
        LoginDAO usuario = new LoginDAO();
-       String usuariDigitado = txtUsuario.getText();
+       String usuarioDigitado = txtUsuario.getText();
        String senhaDigitado = txtSenha.getText();
 
-       boolean autenticado = usuario.autenticar (usuariDigitado, senhaDigitado);
+       boolean autenticado = usuario.autenticar (usuarioDigitado, senhaDigitado);
 
        if (autenticado) {
            labelLogin.setText("Usuario e senha corretos!!");
@@ -31,5 +37,6 @@ public class HelloController {
            labelLogin.setText("Usuario ou senha incorretos!!");
        }
     }
+
 
 }
