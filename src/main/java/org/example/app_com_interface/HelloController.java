@@ -15,11 +15,14 @@ public class HelloController {
     @FXML
     Hyperlink LinkCadastro;
 
+
     @FXML
     protected void irParaTelaCadastro () throws Exception {
         // chama o metodo da Appllication para trocar a cena
         HelloApplication.trocadorDeTelas("cadastro.fxml");
     }
+
+
 
 
     @FXML

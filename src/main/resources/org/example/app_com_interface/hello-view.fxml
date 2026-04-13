@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -9,9 +10,9 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Login">
+            <Label styleClass="title_1" text="Login">
                <font>
-                  <Font name="Arial Bold" size="22.0" />
+                  <Font name="Arial Bold" size="28.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="30.0" />
@@ -26,11 +27,15 @@
                </VBox.margin></PasswordField>
             <HBox alignment="CENTER" prefHeight="26.0" prefWidth="400.0" spacing="35.0">
                <children>
-                  <CheckBox mnemonicParsing="false" text="Lembrar senha" />
-                  <Hyperlink fx:id="LinkCadastro" onAction="#irParaTelaCadastro" text="Criar conta" />
+                  <CheckBox mnemonicParsing="false" text="Lembrar senha" textFill="#d4af37" />
+                  <Hyperlink fx:id="LinkCadastro" onAction="#irParaTelaCadastro" text="Criar conta" textFill="#d4af37" />
                </children>
             </HBox>
-            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#onBtnLoginClick" style="-fx-background-color: #B89150; -fx-text-fill: white; -fx-background-radius: 4; -fx-font-family: arial; -fx-font-weight: bold; -fx-font-size: 14; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 3);" text="Login" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#onBtnLoginClick" style="-fx-background-color: #D4AF37; -fx-text-fill: black; -fx-font-weight: bold; -fx-cursor: hand;" text="LOGIN">
+               <styleClass>
+                  <String fx:value="accent" />
+                  <String fx:value="rounded" />
+               </styleClass></Button>
             <Label fx:id="labelLogin" textFill="#4bc657" />
          </children>
       </VBox>

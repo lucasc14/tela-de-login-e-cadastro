@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app_com_interface.CadastroController">
-   <left>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="400.0" fitWidth="200.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../images/Logo_na_regua_app.jpeg" />
-               </image>
-            </ImageView>
-         </children></Pane>
-   </left>
    <center>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER">
          <children>
             <Label text="Crie sua conta">
                <font>
@@ -28,8 +18,11 @@
                   <Insets bottom="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets top="15.0" />
+                  <Insets top="30.0" />
                </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Label>
             <TextField fx:id="txtNome" promptText="NOME">
                <opaqueInsets>
@@ -62,15 +55,23 @@
                   <Insets top="30.0" />
                </VBox.margin>
                <children>
-                  <Button fx:id="btnVoltar" alignment="TOP_LEFT" mnemonicParsing="false" style="-fx-background-color: #B89150; -fx-border-radius: 4; -fx-text-fill: white; -fx-font-family: arial; -fx-font-size: 14; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 3); -fx-font-weight: bold;" text="VOLTAR">
+                  <Button fx:id="btnVoltar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#voltarTela" text="VOLTAR">
                      <HBox.margin>
                         <Insets left="30.0" right="30.0" />
                      </HBox.margin>
+                     <styleClass>
+                        <String fx:value="accent" />
+                        <String fx:value="rounded" />
+                     </styleClass>
                   </Button>
-                  <Button fx:id="btnCadastrar" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #B89150; -fx-border-radius: 4; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 3); -fx-font-family: arial; -fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: white;" text="CRIAR CONTA">
+                  <Button fx:id="btnCadastrar" alignment="CENTER" mnemonicParsing="false" text="CRIAR CONTA">
                      <HBox.margin>
                         <Insets left="100.0" right="30.0" />
                      </HBox.margin>
+                     <styleClass>
+                        <String fx:value="accent" />
+                        <String fx:value="rounded" />
+                     </styleClass>
                   </Button>
                </children>
                <padding>

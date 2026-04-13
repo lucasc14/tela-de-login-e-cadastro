@@ -26,5 +26,11 @@ public class CadastroController {
     @FXML
     Button btnCadastrar;
 
+    @FXML
+    protected void voltarTela () throws Exception {
+        // chama o metodo da Appllication para trocar a cena
+        HelloApplication.trocadorDeTelas("hello-view.fxml");
+    }
+
 
 }
