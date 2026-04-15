@@ -1,36 +1,82 @@
 package org.example.app_com_interface;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+
+import java.util.Objects;
 
 public class CadastroController {
     @FXML
-    TextField txtNome ;
+   private TextField txtNome ;
 
     @FXML
-    TextField txtEmail ;
+  private   TextField txtEmail ;
 
     @FXML
-    PasswordField txtSenha;
+   private PasswordField txtSenha;
 
     @FXML
-    PasswordField txtConfirmarSenha;
+   private PasswordField txtConfirmarSenha;
 
 
     @FXML
-    Button btnVoltar;
+   private Button btnVoltar;
 
     @FXML
-    Button btnCadastrar;
+   private Button btnCadastrar;
 
     @FXML
     protected void voltarTela () throws Exception {
-        // chama o metodo da Appllication para trocar a cena
+        // ao cliclar no botão volta para tela de login
         HelloApplication.trocadorDeTelas("hello-view.fxml");
     }
 
+    @FXML
+    protected void onCadastrar () throws Exception {
+        //1. Le os valores digitados nos campos de tela
+        // getText () retorna o conteudo atual do campo como String
 
-}
+        String nome = txtNome.getText();
+        String email = txtEmail.getText();
+        String senha = txtSenha.getText();
+        String confirmarSenha = txtConfirmarSenha.getText();
+
+        //2. Validar se tem um campo vazio
+        if (nome.isBlank () || senha.isBlank () || email.isBlank () || confirmarSenha.isBlank () ) {
+            //  exibe uma janela de aviso para o usuario
+            Alert alerta = new Alert(Alert.AlertType.WARNING);
+            alerta.setTitle("Campos obrigatorios!");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Por favor, preencha os campos obrigatorios antes de cadastrar !");
+            alerta.showAndWait();
+
+            // interromper o metodo
+
+            return;
+        }
+
+
+            // Verificar se senha e confirmar senha são iguais
+            if (!Objects.equals(senha, confirmarSenha)) {
+
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Senhas nã o conferem!");
+                alerta.setHeaderText(null);
+                alerta.setContentText("AS senhas não conferem! Digite a senha novamente !");
+                alerta.showAndWait();
+
+                return;
+
+            }
+
+            // 3. Cria uma instancia do CadastroDAO
+            CadastroDAO dao = new CadastroDAO();
+
+
+
+        }
+
+    }
+
+
+

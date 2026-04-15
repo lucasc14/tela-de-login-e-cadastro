@@ -1,0 +1,74 @@
+/* Customização do botão de Login */
+.button-login {
+    -fx-background-color: #D4AF37;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px; /* Bordas levemente arredondadas combinam com o Primer */
+    -fx-cursor: hand;
+}
+
+.button-login:hover {
+    -fx-background-color: #B8860B;
+}
+
+/* Estilo para o botão de "Criar Conta" (Outline) */
+.button-secondary {
+    -fx-background-color: transparent;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-text-fill: #D4AF37;
+}
+
+.button-secondary:hover {
+    -fx-background-color: rgba(212, 175, 55, 0.1); /* Brilho sutil no hover */
+}
+
+.button-metal {
+    /* Gradiente que vai de um dourado escuro para um claro e volta ao escuro */
+    -fx-background-color: linear-gradient(to bottom, #b8860b 0%, #e6be8a 45%, #d4af37 55%, #8b6508 100%);
+    -fx-text-fill: #1a1a1a;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    /* Adiciona uma borda fina para dar profundidade */
+    -fx-border-color: #5c4306;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+}
+
+.button-metal:hover {
+    /* Inverte ou clareia o gradiente no hover para efeito de brilho */
+    -fx-background-color: linear-gradient(to bottom, #d4af37 0%, #f9e4b7 45%, #e6be8a 55%, #b8860b 100%);
+}
+
+.button-steel {
+    -fx-background-color: linear-gradient(to bottom, #444 0%, #e1e1e1 45%, #999 55%, #333 100%);
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-color: #222;
+}
+
+.button-steel:hover {
+    -fx-background-color: linear-gradient(to bottom, #666 0%, #ffffff 45%, #ccc 55%, #444 100%);
+}
+
+/* Estilo padrão para os campos (TextField e PasswordField) */
+.campo-na-regua {
+    -fx-background-color: #1a1a1a; /* Fundo escuro para combinar com o Primer Dark */
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #666;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #444; /* Borda cinza quando não está clicado */
+    -fx-border-width: 1.5;
+}
+
+/* Quando o usuário clica para digitar (Foco) */
+.campo-na-regua:focused {
+    /* Gradiente linear para simular o dourado metálico na borda */
+    -fx-border-color: linear-gradient(to right, #b8860b, #d4af37, #b8860b);
+    -fx-border-width: 2; /* Aumenta levemente a espessura para destacar */
+    -fx-background-color: #222; /* Escurece levemente o fundo ao focar */
+}
