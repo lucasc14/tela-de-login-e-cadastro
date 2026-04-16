@@ -72,3 +72,14 @@
     -fx-border-width: 2; /* Aumenta levemente a espessura para destacar */
     -fx-background-color: #222; /* Escurece levemente o fundo ao focar */
 }
+
+/* Quando o CheckBox estiver no estado selecionado (:selected) */
+.check-box:selected .box {
+    -fx-background-color: #FFFF00; /* Amarelo */
+    -fx-border-color: #FFFF00;     /* Opcional: borda amarela para combinar */
+}
+
+/* Garante que a marca de seleção (o "check") continue visível (geralmente preto ou cinza escuro) */
+.check-box:selected .mark {
+    -fx-background-color: black;
+}
