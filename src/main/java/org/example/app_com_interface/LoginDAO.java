@@ -1,5 +1,7 @@
 package org.example.app_com_interface;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,6 +14,7 @@ public class LoginDAO {
     public boolean autenticar(String nomeDigitado, String senhaDigitada) {
         String sql = "SELECT senha FROM usuario WHERE nome = ?";
 
+
         try (
                 Connection conn = DatabaseConfig.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)
@@ -21,10 +24,11 @@ public class LoginDAO {
             try (ResultSet rs = stmt.executeQuery()) {
 
                 if (rs.next()) {
-                    String senhaDoBanco = rs.getString("senha");
+                    String hashDoBanco = rs.getString("senha");
 
-                    if(senhaDigitada.equals(senhaDoBanco))
+                    if(BCrypt.checkpw(senhaDigitada, hashDoBanco)) {
                         return true; //senha correta
+                    }
 
                     else {
                         return false;//senha incorreta

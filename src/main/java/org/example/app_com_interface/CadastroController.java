@@ -72,6 +72,24 @@ public class CadastroController {
             // 3. Cria uma instancia do CadastroDAO
             CadastroDAO dao = new CadastroDAO();
 
+            //4. Chama o metodo de cadastro do cliente
+            dao.cadastrarUsuario(nome, email, senha);
+
+            //5.informa ao usuario que o cadastro foi realizado
+
+            Alert sucesso = new Alert(Alert.AlertType.CONFIRMATION);
+            sucesso.setTitle("Cadastro realizado!");
+            sucesso.setHeaderText(null);
+            sucesso.setContentText("Cadastro realizado com sucesso!");
+            sucesso.showAndWait();
+
+            //6. limpa os campos de texto
+            txtNome.clear();
+            txtEmail.clear();
+            txtSenha.clear();
+            txtConfirmarSenha.clear();
+
+            HelloApplication.trocadorDeTelas("hello-view.fxml");
 
 
         }
