@@ -43,7 +43,7 @@ Siga os passos abaixo para configurar e executar a aplicação na sua máquina l
 3. **Configuração do Projeto:**
    * Clone ou baixe os arquivos deste repositório.
    * Abra o projeto em sua IDE (como IntelliJ IDEA ou Eclipse).
-   * No arquivo de conexão (ex: `ConexaoJDBC.java`), atualize as credenciais de acesso com seu usuário e senha do MySQL local.
+   * No arquivo de conexão (ex: `DatabaseConfig.java`), atualize as credenciais de acesso com seu usuário e senha do MySQL local.
 
 4. **Execução:**
    * Compile e baixe as dependências via Maven.
