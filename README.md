@@ -1,16 +1,16 @@
 # Sistema de Login e Cadastro 🔐
 
-## **Descrição**
+## DESCRIÇÃO
 Este é um sistema de autenticação desktop desenvolvido para fornecer um fluxo seguro de **Login e Cadastro** de usuários. O projeto foi construído para demonstrar a integração de uma interface gráfica moderna com práticas robustas de segurança, como a criptografia de senhas, evitando o armazenamento de dados sensíveis em texto puro. É uma solução ideal para servir como base de controle de acesso para aplicações Java, focando em segurança e experiência do usuário.
 
-## **Funcionalidades**
+## FUNCIONALIDADES
 * **Cadastro de Usuários:** Interface intuitiva para o registro de novos usuários, com validação de dados e persistência imediata.
 * **Autenticação Segura:** Sistema de login que valida as credenciais diretamente no banco de dados.
 * **Criptografia com BCrypt:** As senhas são transformadas em hashes seguros antes do armazenamento, impossibilitando a leitura da senha original mesmo em caso de acesso ao banco.
 * **Persistência de Dados:** Integração completa com MySQL para armazenamento duradouro das informações de perfil.
 * **Feedback ao Usuário:** Alertas visuais para sucessos ou erros de login e preenchimento de campos.
 
-## **TECNOLOGIAS USADAS **
+## TECNOLOGIAS USADAS 
 * **Linguagem:** Java
 * **Interface Gráfica:** JavaFX (utilizando FXML para uma estrutura de UI organizada)
 * **Banco de Dados:** MySQL
@@ -18,7 +18,7 @@ Este é um sistema de autenticação desktop desenvolvido para fornecer um fluxo
 * **Segurança:** BCrypt (biblioteca para hashing de senhas)
 * **Gerenciamento de Dependências:** Maven
 
-## **INSTRUÇÕES**
+## INSTRUÇÕES DE USO 
 
 Siga os passos abaixo para configurar e executar a aplicação na sua máquina local:
 
