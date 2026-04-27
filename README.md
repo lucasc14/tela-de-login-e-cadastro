@@ -10,7 +10,7 @@ Este é um sistema de autenticação desktop desenvolvido para fornecer um fluxo
 * **Persistência de Dados:** Integração completa com MySQL para armazenamento duradouro das informações de perfil.
 * **Feedback ao Usuário:** Alertas visuais para sucessos ou erros de login e preenchimento de campos.
 
-## **Tecnologias Utilizadas**
+## **TECNOLOGIAS USADAS **
 * **Linguagem:** Java
 * **Interface Gráfica:** JavaFX (utilizando FXML para uma estrutura de UI organizada)
 * **Banco de Dados:** MySQL
@@ -18,7 +18,7 @@ Este é um sistema de autenticação desktop desenvolvido para fornecer um fluxo
 * **Segurança:** BCrypt (biblioteca para hashing de senhas)
 * **Gerenciamento de Dependências:** Maven
 
-## **Instruções de Uso**
+## **INSTRUÇÕES**
 
 Siga os passos abaixo para configurar e executar a aplicação na sua máquina local:
 
