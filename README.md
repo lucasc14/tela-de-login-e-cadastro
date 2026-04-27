@@ -10,7 +10,7 @@ Este é um sistema de autenticação desktop desenvolvido para fornecer um fluxo
 * **Persistência de Dados:** Integração completa com MySQL para armazenamento duradouro das informações de perfil.
 * **Feedback ao Usuário:** Alertas visuais para sucessos ou erros de login e preenchimento de campos.
 
-## Tecnologias  Utilizadas
+## Tecnologias Utilizadas
 * **Linguagem:** Java
 * **Interface Gráfica:** JavaFX (utilizando FXML para uma estrutura de UI organizada)
 * **Banco de Dados:** MySQL
@@ -49,7 +49,4 @@ Siga os passos abaixo para configurar e executar a aplicação na sua máquina l
    * Compile e baixe as dependências via Maven.
    * Execute o arquivo principal da aplicação (geralmente `Launcher.java`) para abrir a tela de Login.
 
-## 👨‍💻 Autor
 
-**Lucas Cardoso Bizerra** Estudante de Análise e Desenvolvimento de Sistemas (UDF) e Técnico em Desenvolvimento de Sistemas (Senac-DF).  
-[LinkedIn](https://www.linkedin.com/in/seu-perfil) | [GitHub](https://github.com/lucas-cardoso)
